@@ -1,0 +1,142 @@
+/* Inherits Poppins font from App.css body style */
+
+.career-page-container {
+  /* padding is handled by 'main' in App.css, so we might not need extra here unless desired */
+  /* max-width and margin: auto are also handled by 'main' in App.css */
+}
+
+.career-section {
+  background-color: #ffffff; /* White background for sections, consistent with clean themes */
+  border: 1px solid #e0e0e0; /* Softer border color */
+  border-radius: 6px; /* Slightly more subtle border-radius */
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05); /* Softer shadow */
+}
+
+/* Headings will inherit from App.css, but we can add specific margins if needed */
+.career-section h2 {
+  margin-top: 0;
+  /* color: #2c3e50; /* Inherited */
+  /* font-weight: 600; /* Inherited */
+  border-bottom: 1px solid #e9ecef; /* Softer border */
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.career-section p {
+  line-height: 1.7; /* Slightly more spacious line height for readability */
+  color: #555; /* Keep slightly lighter text for paragraphs */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500; /* Poppins medium weight for labels */
+  color: #495057; /* Darker grey for labels */
+}
+
+/* Input and button styles will largely inherit from App.css, but we can ensure consistency */
+.form-group input[type='text'],
+.form-group input[type='file'] {
+  /* Most styles like padding, border, border-radius, focus are inherited from App.css */
+  /* width: 100%; already from App.css */
+  /* Ensure any specific overrides are minimal */
+}
+
+.form-group input[type='file'] {
+  /* Specific styling for file input if App.css doesn't cover it well */
+  padding: 8px; /* Adjust if necessary */
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem; 
+  width: 100%;
+}
+
+/* Submit buttons will use .btn styles from App.css if we add the class, or we can style directly */
+button[type='submit'] {
+  /* These styles will apply if no .btn class is used */
+  background-color: #3498db; /* Primary blue from App.css */
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem; /* Consistent with App.css buttons */
+  font-weight: 500; /* Poppins medium */
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type='submit']:hover {
+  background-color: #2980b9; /* Darker primary blue from App.css */
+}
+
+button[type='submit']:disabled {
+  background-color: #a5c9e3; /* Lighter, disabled version of primary blue */
+  border-color: #a5c9e3;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #721c24; /* Darker red for text, better contrast */
+  background-color: #f8d7da; /* Lighter red background for errors from App.css theme */
+  border: 1px solid #f5c6cb; /* Softer red border */
+  padding: 12px 15px;
+  border-radius: 0.25rem;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.results-box {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #f8f9fa; /* Consistent light grey background */
+  border: 1px solid #e9ecef; /* Softer border */
+  border-radius: 6px;
+}
+
+.results-box h3 {
+  /* color: #2c3e50; /* Inherited */
+  /* font-weight: 600; /* Inherited */
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Styling for content rendered from Markdown */
+.results-box div[dangerouslySetInnerHTML] p,
+.results-box div p { /* Target p tags inside the results box */
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.results-box div[dangerouslySetInnerHTML] ul,
+.results-box div[dangerouslySetInnerHTML] ol,
+.results-box div ul,
+.results-box div ol {
+  margin-left: 20px;
+  margin-bottom: 1rem;
+}
+
+.results-box div[dangerouslySetInnerHTML] li,
+.results-box div li {
+  margin-bottom: 0.5rem;
+}
+
+.results-box div[dangerouslySetInnerHTML] strong,
+.results-box div strong {
+  font-weight: 600; /* Poppins semibold for strong tags */
+}
+
+.results-box div[dangerouslySetInnerHTML] em,
+.results-box div em {
+  font-style: italic;
+}
+
+/* Add more specific styles for other markdown elements as needed (e.g., blockquotes, code blocks) */ 

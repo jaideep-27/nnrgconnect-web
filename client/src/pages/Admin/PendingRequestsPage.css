@@ -1,0 +1,123 @@
+.pending-requests-container {
+  margin: 1rem auto;
+  padding: 1rem;
+  /* background-color: #f9f9f9; Optional: if global is not desired */
+}
+
+.pending-requests-header {
+  text-align: center;
+  /* color: #1a2c42; Handled by global h2 */
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.pending-requests-loading,
+.pending-requests-error,
+.pending-requests-empty {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 2rem;
+  color: #5a6773;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e9ecef;
+  margin-top: 1.5rem;
+}
+
+.pending-requests-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.pending-requests-table-wrapper {
+  overflow-x: auto; /* Allows table to be scrolled horizontally on small screens */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09);
+  border: 1px solid #e9ecef;
+  padding: 0.5rem; /* Padding around the table itself */
+}
+
+.pending-requests-table {
+  width: 100%;
+  border-collapse: collapse; /* Cleaner borders */
+  min-width: 700px; /* Minimum width to encourage horizontal scroll rather than squishing */
+}
+
+.pending-requests-table th,
+.pending-requests-table td {
+  padding: 0.9rem 1rem; /* Comfortable padding */
+  text-align: left;
+  border-bottom: 1px solid #e9ecef; /* Horizontal lines for rows */
+  font-size: 0.95rem;
+}
+
+.pending-requests-table th {
+  font-weight: 600; /* Poppins medium/semibold */
+  color: #2c3e50;
+  background-color: #f8f9fa; /* Light header background */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+}
+
+.pending-requests-table tr:last-child td {
+  border-bottom: none; /* No border for the last row */
+}
+
+.pending-requests-table tr:hover {
+  background-color: #f1f3f5; /* Subtle hover for rows */
+}
+
+.pending-requests-table .id-card-image-thumbnail {
+  max-width: 80px;
+  max-height: 50px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+  cursor: pointer; /* Indicate it can be clicked (if we add modal later) */
+  transition: transform 0.2s ease;
+}
+
+.pending-requests-table .id-card-image-thumbnail:hover {
+  transform: scale(1.5); /* Slight zoom on hover */
+}
+
+/* Action buttons styling - global .btn and .btn-primary/.btn-danger should apply */
+.pending-requests-table .action-button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem; /* Slightly smaller buttons for table */
+  font-size: 0.85rem;
+}
+
+.pending-requests-table .action-button:last-child {
+  margin-right: 0;
+}
+
+/* Ensure btn-danger is defined in App.css if not already */
+/* Example for .btn-danger if needed:
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+*/
+
+@media (max-width: 768px) {
+  .pending-requests-table th,
+  .pending-requests-table td {
+    padding: 0.75rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .pending-requests-table .action-button {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+  }
+} 

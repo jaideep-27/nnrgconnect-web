@@ -1,0 +1,210 @@
+.user-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.user-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.user-card-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 2px solid #3498db; /* Primary color border */
+  background-color: #f0f0f0; /* Placeholder bg */
+}
+
+.user-card-default-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding: 10px; /* Adjust for SVG */
+  margin-right: 1rem;
+  background-color: #e9ecef;
+  color: #adb5bd;
+  border: 2px solid #ced4da;
+}
+
+.user-card-name-roll {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-card-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50; /* Global heading color */
+  margin: 0 0 0.25rem 0;
+}
+
+.user-card-info {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.user-card-info-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-item-label {
+  font-weight: 500;
+  color: var(--text-color-light);
+}
+
+.info-item-value {
+  color: var(--text-color);
+  text-align: right;
+}
+
+.user-card-roll {
+  font-size: 0.85rem;
+  color: var(--text-color-light);
+  margin-top: 0.2rem; /* Small spacing */
+}
+
+.user-card-body {
+  font-size: 0.95rem;
+  color: #495057;
+  flex-grow: 1; /* Allows footer to be at the bottom if card height varies */
+}
+
+.user-card-body p {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+.user-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.user-card-linkedin a {
+  color: #0077b5; /* LinkedIn brand color */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.user-card-linkedin a:hover {
+  text-decoration: underline;
+}
+
+.user-card-email,
+.user-card-phone {
+  word-break: break-all;
+}
+
+.user-card-no-contact {
+    font-style: italic;
+    color: #888;
+}
+
+.user-card-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+  text-align: right; /* Default alignment, can be overridden */
+  display: flex; /* For centering or right-aligning button */
+  justify-content: flex-end; /* Aligns button to the right */
+}
+
+.connect-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  border: 1px solid #3498db; /* Primary blue from App.css */
+  background-color: #3498db;
+  color: white;
+}
+
+.connect-button:hover {
+  background-color: #2980b9; /* Darker primary blue */
+  border-color: #2980b9;
+}
+
+.connect-button:disabled,
+.connect-button.loading-status,
+.connect-button.connected {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.connect-button.loading-status {
+  background-color: #bdc3c7; /* Neutral grey for loading */
+  border-color: #bdc3c7;
+  color: #7f8c8d;
+}
+
+.connect-button.connected {
+  background-color: #2ecc71; /* Green for connected */
+  border-color: #27ae60;
+  color: white;
+}
+
+.connect-button.connected:hover {
+  background-color: #27ae60; /* Maintain green on hover when connected */
+}
+
+.connection-error-message {
+  font-size: 0.85rem;
+  color: #e74c3c; /* Danger color from App.css */
+  margin-top: 0.5rem;
+  text-align: right; /* Or center, to align with button if button is centered */
+  width: 100%; /* If button is centered, error can span width or be specific */
+}
+
+/* Responsive adjustments for footer if needed */
+@media (max-width: 480px) {
+  .user-card-footer {
+    justify-content: center; /* Center button on small screens */
+  }
+  .connect-button {
+    width: 100%; /* Make button full width on very small screens */
+  }
+  .connection-error-message {
+    text-align: center;
+  }
+}
+
+/* Example for a connect button if added directly here */
+/* .user-card-footer button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.user-card-footer button:hover {
+  background-color: #2980b9;
+} */ 

@@ -1,0 +1,411 @@
+/* Inherit global styles for font, etc. */
+.profile-container {
+  /* max-width: 700px; Keep this or adjust as needed */
+  margin: 1rem auto; /* Use rem and match global main padding */
+  padding: 1rem; /* Consistent padding */
+  /* background-color: #f9f9f9; Consider removing if global bg is sufficient */
+}
+
+.profile-header {
+  text-align: center;
+  /* color: #1a2c42; Already handled by global h2 style */
+  margin-bottom: 2rem; /* Increased margin */
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef; /* Lighter border */
+}
+
+.profile-card {
+  background-color: #fff;
+  padding: 2.5rem; /* Increased padding */
+  border-radius: 12px; /* Softer radius */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09); /* Refined shadow */
+  border: 1px solid #e9ecef; /* Consistent light border */
+}
+
+.profile-loading,
+.profile-error {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 2rem;
+  color: #555;
+}
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem; /* Increased gap */
+}
+
+.profile-info-item {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.profile-info-item strong {
+  color: #2c3e50; /* Match global heading color */
+  font-weight: 500; /* Poppins medium weight */
+  margin-right: 0.5rem;
+  display: block;
+  margin-bottom: 0.35rem; /* Adjusted spacing */
+  font-size: 0.9rem; /* Slightly smaller label */
+  text-transform: uppercase; /* Uppercase labels for distinction */
+  letter-spacing: 0.5px;
+}
+
+.profile-info-item span {
+  color: #495057; /* Softer text color for values */
+  word-break: break-word;
+  font-size: 1.05rem; /* Slightly larger for readability */
+}
+
+.profile-id-card-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px dashed #ced4da;
+}
+
+.profile-id-card-section strong {
+  display: block;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-id-card-image {
+  display: block;
+  max-width: 100%;
+  width: 100%; /* Make image responsive within its container */
+  max-height: 350px; /* Increased max height */
+  border: 1px solid #dee2e6;
+  border-radius: 8px; /* Consistent softer radius */
+  margin-top: 0.5rem;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  object-fit: contain; /* Ensure image is contained and not skewed */
+}
+
+/* Update button to match global .btn styles if uncommented in JSX */
+/*
+.profile-update-button {
+  display: inline-block; // Align with .btn
+  padding: 0.6rem 1.2rem; // Match .btn
+  font-size: 1rem; // Match .btn
+  border-radius: 0.25rem; // Match .btn
+  cursor: pointer;
+  border: 1px solid #007bff; // Match .btn-primary
+  background-color: #007bff; // Match .btn-primary
+  color: white; // Match .btn-primary
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  margin-top: 2rem; // Use rem
+}
+
+.profile-update-button:hover {
+  background-color: #0056b3; // Match .btn-primary:hover
+  border-color: #0052cc; // Match .btn-primary:hover
+}
+*/
+
+/* Logout Button Styling */
+.profile-logout-button {
+  display: block; /* Make it a block to take full width or fit its content based on margin */
+  width: auto; /* Auto width based on content and padding */
+  min-width: 120px; /* Minimum width for better appearance */
+  padding: 0.6rem 1.2rem; /* Consistent with .btn from App.css */
+  font-size: 1rem; /* Consistent with .btn from App.css */
+  font-weight: 500; /* Poppins medium */
+  border-radius: 0.25rem; /* Consistent with .btn from App.css */
+  cursor: pointer;
+  text-align: center;
+  background-color: #e74c3c; /* Danger color from App.css */
+  color: white;
+  border: 1px solid #e74c3c; /* Danger color from App.css */
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  margin-top: 2.5rem; /* Space above the logout button */
+  margin-left: auto; /* Center button if its parent is a flex/grid or if it's a block with auto margins */
+  margin-right: auto;
+}
+
+.profile-logout-button:hover {
+  background-color: #c0392b; /* Darker danger color from App.css */
+  border-color: #b33225; /* Darker danger color for border from App.css */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 2rem;
+  }
+  .profile-info-grid {
+     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+  .profile-card {
+    padding: 1.5rem;
+  }
+  .profile-header {
+    font-size: 1.6rem; /* Poppins looks good a bit larger */
+    margin-bottom: 1.5rem;
+  }
+  .profile-info-item span {
+    font-size: 1rem;
+  }
+  .profile-id-card-section strong {
+    font-size: 1.1rem;
+  }
+}
+
+/* Profile Edit Form Specifics */
+.profile-edit-form {
+  background-color: #fff; /* Match profile card or slightly different for distinction */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  margin-bottom: 2.5rem; /* Space before the read-only profile card */
+  border: 1px solid #e9ecef;
+}
+
+.profile-picture-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-picture-label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block; /* To contain the image and overlay correctly */
+}
+
+.profile-picture-label .profile-picture-img,
+.profile-picture-label .profile-default-icon {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #e0e0e0;
+  object-fit: cover;
+  display: block; /* Remove extra space below image */
+  background-color: #f0f0f0; /* Placeholder bg for default icon */
+}
+
+.profile-picture-label .profile-default-icon {
+  padding: 20px; /* Adjust padding for SVG size */
+  color: #777;
+}
+
+.profile-picture-label span {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.profile-picture-label:hover span {
+  opacity: 1;
+}
+
+/* General form group styling from App.css should apply, but we can add specifics */
+.profile-edit-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.profile-edit-form .form-group label,
+.profile-edit-form .form-group-inline label {
+  /* Styles inherited or can be specified like in CareerPage.css */
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.profile-edit-form input[type="url"] {
+  /* Inherits from App.css global input styles */
+  padding: 0.6rem; /* Adjust if needed */
+}
+
+.form-group-inline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 10px; /* Space between label and checkbox */
+}
+
+.form-group-inline input[type="checkbox"] {
+  width: auto; /* Override global input width for checkboxes */
+  height: 18px; /* Custom size for checkbox */
+  accent-color: #3498db; /* Match primary color */
+  cursor: pointer;
+}
+
+.profile-save-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #28a745; /* A common success/save green */
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1.5rem;
+}
+
+.profile-save-button:hover {
+  background-color: #218838;
+}
+
+.profile-save-button:disabled {
+  background-color: #a3d8b1;
+  cursor: not-allowed;
+}
+
+/* Messages for update status */
+.update-error,
+.update-success {
+  text-align: center;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; /* Ensure space even if button is next */
+  border-radius: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.update-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.update-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* The existing .profile-card can now be considered the display part */
+/* Adjust .profile-card if its content (like ID card) needs different layout with the form above */
+.profile-card {
+    margin-top: 0; /* Remove top margin if form is directly above */
+}
+
+/* Responsive adjustments (ensure edit form also behaves well) */
+@media (max-width: 768px) {
+  .profile-edit-form {
+    padding: 1.5rem;
+  }
+  /* ... other responsive adjustments from before ... */
+}
+
+@media (max-width: 600px) {
+  .profile-edit-form {
+    padding: 1rem;
+  }
+  .profile-picture-label .profile-picture-img,
+  .profile-picture-label .profile-default-icon {
+    width: 100px;
+    height: 100px;
+  }
+  /* ... other responsive adjustments from before ... */
+}
+
+.connections-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-family: 'Poppins', sans-serif; /* Ensure Poppins font */
+}
+
+.connections-header {
+  font-size: 1.6em; /* Slightly larger for better hierarchy */
+  color: #333; /* Dark grey, common text color */
+  margin-bottom: 20px; /* Increased spacing */
+  font-weight: 600; /* Medium bold */
+}
+
+.connections-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Base for larger screens */
+  gap: 20px; /* Increased gap */
+}
+
+.connection-item {
+  display: flex;
+  flex-direction: column; /* Stack name and roll number */
+  justify-content: center;
+  align-items: center;
+  padding: 15px; /* Increased padding */
+  border: 1px solid #e0e0e0; /* Lighter border */
+  border-radius: 8px;
+  background-color: #ffffff; /* White background */
+  text-align: center;
+  min-height: 60px; /* Adjusted min-height */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
+  transition: box-shadow 0.3s ease;
+}
+
+.connection-item:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
+}
+
+.connection-name {
+  font-size: 1.1em; /* Slightly larger name */
+  color: #2c3e50; /* Darker, professional blue/grey */
+  font-weight: 500; /* Medium weight */
+  margin-bottom: 5px; /* Space between name and roll number */
+}
+
+.connection-rollno {
+  font-size: 0.9em;
+  color: #7f8c8d; /* Softer grey for secondary info */
+}
+
+.connections-section .error-message {
+  color: #e74c3c; /* Standard error color */
+  font-size: 1em;
+}
+
+/* Mobile Responsiveness: Single column for screens <= 600px */
+@media (max-width: 600px) {
+  .connections-list {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 15px; /* Adjust gap for single column if needed */
+  }
+
+  .connection-item {
+    padding: 12px; /* Slightly less padding for smaller items */
+  }
+
+  .connections-header {
+    font-size: 1.4em;
+  }
+
+  .connection-name {
+    font-size: 1em;
+  }
+
+  .connection-rollno {
+    font-size: 0.85em;
+  }
+} 

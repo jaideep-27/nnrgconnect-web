@@ -1,0 +1,113 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; /* Ensure it takes most of the viewport height */
+  padding: 1rem; /* Use rem */
+  box-sizing: border-box;
+  background-color: #f8f9fa; /* Match global body background */
+}
+
+.auth-form-wrapper {
+  background-color: #fff;
+  padding: 2rem 2.5rem; /* Use rem, slightly more padding */
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  width: 100%;
+  max-width: 420px; /* Slightly wider for comfort */
+  text-align: center; /* Center contents like logo and heading */
+}
+
+.auth-logo {
+  max-width: 150px; /* Adjust as needed */
+  height: auto;
+  margin-bottom: 1.5rem;
+  display: block; /* Make it a block-level element */
+  margin-left: auto; /* Auto margin on the left */
+  margin-right: auto; /* Auto margin on the right */
+}
+
+.auth-form-wrapper h2 {
+  text-align: center;
+  color: #1a2c42; /* Global heading color */
+  margin-bottom: 1.5rem; /* Use rem */
+  font-size: 1.75rem; /* Adjusted size */
+}
+
+.auth-input-group {
+  margin-bottom: 1.25rem; /* Use rem */
+}
+
+.auth-input-group label {
+  display: block;
+  margin-bottom: 0.5rem; /* Use rem */
+  color: #495057; /* Darker gray for labels */
+  font-weight: 600; /* Bolder labels */
+  font-size: 0.9rem;
+}
+
+/* Input styles are now primarily handled by App.css */
+/* We might keep specific tweaks for file input if necessary */
+.auth-input-group input[type="file"] {
+  /* Global styles will apply, but we can override padding or add specific styles if needed */
+  /* For example, if it needs less padding than text inputs: */
+  /* padding: 0.4rem 0.6rem; */ 
+  /* Ensure it still looks consistent */
+  border: 1px solid #ced4da; /* Explicitly set border if global is too generic */
+}
+
+/* .auth-button styles are now handled by .btn and .btn-primary in App.css */
+/* Ensure buttons in SignInPage.js and SignUpPage.js have these classes. */
+
+.auth-message {
+  padding: 0.75rem 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.auth-error {
+  color: #721c24; /* Dark red for errors */
+  background-color: #f8d7da; /* Light red background */
+  border-color: #f5c6cb; /* Red border */
+}
+
+.auth-success {
+    color: #155724; /* Dark green for success */
+    background-color: #d4edda; /* Light green background */
+    border-color: #c3e6cb; /* Green border */
+}
+
+.auth-redirect-link {
+  text-align: center;
+  margin-top: 1.5rem; /* Use rem */
+  font-size: 0.9rem;
+}
+
+.auth-redirect-link p {
+  margin-bottom: 0.5rem;
+  color: #495057; 
+}
+
+.auth-redirect-link a {
+  color: #007bff; /* Global link color */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-redirect-link a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Global link hover color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .auth-form-wrapper {
+    padding: 1.5rem 1.25rem; /* Adjust padding for smaller screens */
+  }
+  .auth-form-wrapper h2 {
+    font-size: 1.5rem;
+  }
+} 

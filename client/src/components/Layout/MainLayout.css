@@ -1,0 +1,40 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+.main-app-header {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem; /* Adjust padding as needed */
+  background-color: #ffffff; /* White background for the header */
+  border-bottom: 1px solid #dee2e6; /* Subtle border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+  position: fixed; /* Fixed at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1010; /* Ensure it's above main content and bottom nav if necessary */
+  height: 60px; /* Standard header height */
+}
+
+.header-logo {
+  height: 35px; /* Adjust logo size */
+  width: auto;
+  margin-right: 0.75rem;
+}
+
+.header-title {
+  font-size: 1.25rem; /* Adjust title font size */
+  font-weight: 600; /* Poppins semibold */
+  color: #2c3e50; /* Match global heading color */
+}
+
+.main-content {
+  flex-grow: 1; /* Allows content to take up available space */
+  padding-top: 75px; /* Header height (60px) + buffer (15px) */
+  padding-bottom: 80px; /* BottomNavBar height (65px) + buffer (15px) */
+  /* background-color: #f9f9f9; /* Removed, as global body background from App.css will apply */
+} 

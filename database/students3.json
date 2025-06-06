@@ -1,0 +1,538 @@
+[
+    {
+        "S.No.":1,
+        "Roll Number":"207Z1A05F1",
+        "Name of the Student":"SHAIK AYRA SAHAF",
+        "Father Name":"SHAIK KHALIK",
+        "Student Mobile":8978443517,
+        "Parent Mobile":8978443517
+    },
+    {
+        "S.No.":2,
+        "Roll Number":"217Z1A0501",
+        "Name of the Student":"ABBUNAPURAM AJAY",
+        "Father Name":"ABBUNAPURAM VENKATESHWARLU",
+        "Student Mobile":8639148690,
+        "Parent Mobile":8639823617
+    },
+    {
+        "S.No.":3,
+        "Roll Number":"217Z1A0502",
+        "Name of the Student":"ABDUL AADIL",
+        "Father Name":"ABDUL HAMEED",
+        "Student Mobile":9398269359,
+        "Parent Mobile":9989607866
+    },
+    {
+        "S.No.":4,
+        "Roll Number":"217Z1A0503",
+        "Name of the Student":"AISHWARIYA CHOUDHARY",
+        "Father Name":"SANJIB KUMAR CHOUDHARY",
+        "Student Mobile":7032179726,
+        "Parent Mobile":9160349726
+    },
+    {
+        "S.No.":5,
+        "Roll Number":"217Z1A0504",
+        "Name of the Student":"AKKALA SWETHA",
+        "Father Name":"AKKALA KRISHNAIAH GOUD",
+        "Student Mobile":7842570756,
+        "Parent Mobile":9398469743
+    },
+    {
+        "S.No.":6,
+        "Roll Number":"217Z1A0505",
+        "Name of the Student":"AKULA BHARATH",
+        "Father Name":"AKULA NARSAIAH",
+        "Student Mobile":9640787463,
+        "Parent Mobile":9959536603
+    },
+    {
+        "S.No.":7,
+        "Roll Number":"217Z1A0506",
+        "Name of the Student":"AKURATHI SAHITHYA",
+        "Father Name":"SRINIVASA RAO",
+        "Student Mobile":9866331551,
+        "Parent Mobile":9866331551
+    },
+    {
+        "S.No.":8,
+        "Roll Number":"217Z1A0507",
+        "Name of the Student":"ALAKUNTLA RESHMA",
+        "Father Name":"ALAKUNTLA SREENU",
+        "Student Mobile":7842132484,
+        "Parent Mobile":9908645711
+    },
+    {
+        "S.No.":9,
+        "Roll Number":"217Z1A0508",
+        "Name of the Student":"ALE THILAK",
+        "Father Name":"ALE VENU",
+        "Student Mobile":9676778484,
+        "Parent Mobile":9701509773
+    },
+    {
+        "S.No.":10,
+        "Roll Number":"217Z1A0509",
+        "Name of the Student":"ALLURI GOPI",
+        "Father Name":"ALLURI KRISHNA",
+        "Student Mobile":9505181256,
+        "Parent Mobile":9502638024
+    },
+    {
+        "S.No.":11,
+        "Roll Number":"217Z1A0510",
+        "Name of the Student":"ANISETTY AKASH",
+        "Father Name":"A ANJANEYULU",
+        "Student Mobile":7330731319,
+        "Parent Mobile":8978752009
+    },
+    {
+        "S.No.":12,
+        "Roll Number":"217Z1A0511",
+        "Name of the Student":"APPASU SAI CHARAN",
+        "Father Name":"APPASU VENKATESHWARLU",
+        "Student Mobile":6302928321,
+        "Parent Mobile":7989363797
+    },
+    {
+        "S.No.":13,
+        "Roll Number":"217Z1A0512",
+        "Name of the Student":"ARUKALI VIJAY KUMAR",
+        "Father Name":"ARUKALI SRINIVAS",
+        "Student Mobile":7396970180,
+        "Parent Mobile":7036929923
+    },
+    {
+        "S.No.":14,
+        "Roll Number":"217Z1A0513",
+        "Name of the Student":"B SUSHMA",
+        "Father Name":"B NAGA RAJU",
+        "Student Mobile":9100275771,
+        "Parent Mobile":9866619336
+    },
+    {
+        "S.No.":15,
+        "Roll Number":"217Z1A0514",
+        "Name of the Student":"BADDAM UDAY KIRAN",
+        "Father Name":"BADDAM VENKAT REDDY",
+        "Student Mobile":9347166089,
+        "Parent Mobile":8341090787
+    },
+    {
+        "S.No.":16,
+        "Roll Number":"217Z1A0515",
+        "Name of the Student":"BAKURI RAKSHITHA",
+        "Father Name":"BAKURI RANGAIAH",
+        "Student Mobile":9030874576,
+        "Parent Mobile":9030874576
+    },
+    {
+        "S.No.":17,
+        "Roll Number":"217Z1A0516",
+        "Name of the Student":"BALE MANOHAR",
+        "Father Name":"BALE LAXMINARAYANA",
+        "Student Mobile":9000216663,
+        "Parent Mobile":9676589843
+    },
+    {
+        "S.No.":18,
+        "Roll Number":"217Z1A0517",
+        "Name of the Student":"BALLEM RAJASRI",
+        "Father Name":"SRINU",
+        "Student Mobile":7702589006,
+        "Parent Mobile":8008561972
+    },
+    {
+        "S.No.":19,
+        "Roll Number":"217Z1A0518",
+        "Name of the Student":"BANDELA SIBMAH HADASSAH",
+        "Father Name":"BANDELA ACHUTHA MARY VARAPRASAD",
+        "Student Mobile":7396623038,
+        "Parent Mobile":9381411745
+    },
+    {
+        "S.No.":20,
+        "Roll Number":"217Z1A0519",
+        "Name of the Student":"BANDI REVATHI",
+        "Father Name":"BANDI VENKATESH",
+        "Student Mobile":7569752532,
+        "Parent Mobile":9912881103
+    },
+    {
+        "S.No.":21,
+        "Roll Number":"217Z1A0520",
+        "Name of the Student":"BANDLA SATYA SRI",
+        "Father Name":"BANDLA NARSIMHA RAO",
+        "Student Mobile":8712120268,
+        "Parent Mobile":9959196843
+    },
+    {
+        "S.No.":22,
+        "Roll Number":"217Z1A0521",
+        "Name of the Student":"BANGARI SAI NITHIN",
+        "Father Name":"BANGARI SURESH",
+        "Student Mobile":8686092143,
+        "Parent Mobile":7731889898
+    },
+    {
+        "S.No.":23,
+        "Roll Number":"217Z1A0522",
+        "Name of the Student":"BANKA MANIKATH",
+        "Father Name":"BANKA SATYANAYARANA",
+        "Student Mobile":9866172038,
+        "Parent Mobile":9866172038
+    },
+    {
+        "S.No.":24,
+        "Roll Number":"217Z1A0523",
+        "Name of the Student":"BANOTHU RITHIKA",
+        "Father Name":"BHASHA",
+        "Student Mobile":9398336256,
+        "Parent Mobile":9676780670
+    },
+    {
+        "S.No.":25,
+        "Roll Number":"217Z1A0524",
+        "Name of the Student":"BATHULA VINAY KUMAR",
+        "Father Name":"LAXMI NARAYANA",
+        "Student Mobile":9398242635,
+        "Parent Mobile":7382175042
+    },
+    {
+        "S.No.":26,
+        "Roll Number":"217Z1A0525",
+        "Name of the Student":"BAYYA KARTHIK",
+        "Father Name":"BAYYA KRISHNA",
+        "Student Mobile":6301704577,
+        "Parent Mobile":9666519989
+    },
+    {
+        "S.No.":27,
+        "Roll Number":"217Z1A0526",
+        "Name of the Student":"BEJAWADA AKHIL KUMAR",
+        "Father Name":"BEJAWADA KASAIAH",
+        "Student Mobile":7993313240,
+        "Parent Mobile":7396239277
+    },
+    {
+        "S.No.":28,
+        "Roll Number":"217Z1A0527",
+        "Name of the Student":"BEJJANKI RAVI TEJA",
+        "Father Name":"BEJJANKI SATTAIAH",
+        "Student Mobile":6281496727,
+        "Parent Mobile":9550300692
+    },
+    {
+        "S.No.":29,
+        "Roll Number":"217Z1A0528",
+        "Name of the Student":"BETHELLI LATHA",
+        "Father Name":"BETHELLI RAVINDER REDDY",
+        "Student Mobile":9110530921,
+        "Parent Mobile":9701154882
+    },
+    {
+        "S.No.":30,
+        "Roll Number":"217Z1A0530",
+        "Name of the Student":"BILLAPATI HEMANTH REDDY",
+        "Father Name":"BILLAPATI YADAGIRI REDDY",
+        "Student Mobile":9154742908,
+        "Parent Mobile":7799656427
+    },
+    {
+        "S.No.":31,
+        "Roll Number":"217Z1A0531",
+        "Name of the Student":"BODAKUNTA MADHUKAR",
+        "Father Name":"BODAKUNTA ANANDHAM",
+        "Student Mobile":9440723516,
+        "Parent Mobile":8500821718
+    },
+    {
+        "S.No.":32,
+        "Roll Number":"217Z1A0532",
+        "Name of the Student":"BOLLA REVANTH",
+        "Father Name":"BOLLA SRINU",
+        "Student Mobile":7013890668,
+        "Parent Mobile":9912611374
+    },
+    {
+        "S.No.":33,
+        "Roll Number":"217Z1A0533",
+        "Name of the Student":"BONAKURTHI KAVYA",
+        "Father Name":"BONAKURTHI SATHYANARAYANA",
+        "Student Mobile":9390731343,
+        "Parent Mobile":9494568398
+    },
+    {
+        "S.No.":34,
+        "Roll Number":"217Z1A0534",
+        "Name of the Student":"BONBOTULA VENKATESH",
+        "Father Name":"BONBOTULA ANAND GOUD",
+        "Student Mobile":6281132746,
+        "Parent Mobile":9963595424
+    },
+    {
+        "S.No.":35,
+        "Roll Number":"217Z1A0537",
+        "Name of the Student":"CHELMALAPALLY ARUN KUMAR",
+        "Father Name":"CHELMALAPALLY LAXMAN",
+        "Student Mobile":9182348286,
+        "Parent Mobile":8247040900
+    },
+    {
+        "S.No.":36,
+        "Roll Number":"217Z1A0538",
+        "Name of the Student":"CHENCHALA UDAY",
+        "Father Name":"CHENCHALA RAMBABU",
+        "Student Mobile":9347690300,
+        "Parent Mobile":9492359471
+    },
+    {
+        "S.No.":37,
+        "Roll Number":"217Z1A0539",
+        "Name of the Student":"CHERKA NITESH KUMAR",
+        "Father Name":"CHERKA GUNNAIAH",
+        "Student Mobile":9542380220,
+        "Parent Mobile":9666053270
+    },
+    {
+        "S.No.":38,
+        "Roll Number":"217Z1A0540",
+        "Name of the Student":"CHINTHAKINDI SAI TARUN",
+        "Father Name":"CHINTAKINDI YADAGIRI",
+        "Student Mobile":9502192702,
+        "Parent Mobile":9989449631
+    },
+    {
+        "S.No.":39,
+        "Roll Number":"217Z1A0541",
+        "Name of the Student":"CHINTHAPALLY KRUPAKAR",
+        "Father Name":"CHINTHAPALLY NAGAIAH",
+        "Student Mobile":7093934827,
+        "Parent Mobile":9000552067
+    },
+    {
+        "S.No.":40,
+        "Roll Number":"217Z1A0542",
+        "Name of the Student":"CHIRALA SURYA TEJA",
+        "Father Name":"CHIRALA RAMESH",
+        "Student Mobile":8247206509,
+        "Parent Mobile":8978978960
+    },
+    {
+        "S.No.":41,
+        "Roll Number":"217Z1A0543",
+        "Name of the Student":"CHITTIMALLA ANJI",
+        "Father Name":"CHITTIMALLA VENKANNA",
+        "Student Mobile":8639268956,
+        "Parent Mobile":9493623297
+    },
+    {
+        "S.No.":42,
+        "Roll Number":"217Z1A0544",
+        "Name of the Student":"CHITTIMALLA SANTOSH KUMAR",
+        "Father Name":"CH VEERESHAM",
+        "Student Mobile":7337094645,
+        "Parent Mobile":9989040188
+    },
+    {
+        "S.No.":43,
+        "Roll Number":"217Z1A0545",
+        "Name of the Student":"DARSHANA VIJAY",
+        "Father Name":"DARSHANA RAMA KRISHNA",
+        "Student Mobile":8328000939,
+        "Parent Mobile":9885753164
+    },
+    {
+        "S.No.":44,
+        "Roll Number":"217Z1A0546",
+        "Name of the Student":"DASARAM SAI KUMAR",
+        "Father Name":"DASARAM SAMPATH",
+        "Student Mobile":9347340568,
+        "Parent Mobile":9951858062
+    },
+    {
+        "S.No.":45,
+        "Roll Number":"217Z1A0547",
+        "Name of the Student":"DASARI PRASHANTH",
+        "Father Name":"DASARI NARSAIAH",
+        "Student Mobile":8374010804,
+        "Parent Mobile":9550596215
+    },
+    {
+        "S.No.":46,
+        "Roll Number":"217Z1A0548",
+        "Name of the Student":"DATLA NEHA SRI",
+        "Father Name":"DATLA SRINIVASA RAJU",
+        "Student Mobile":9963236860,
+        "Parent Mobile":9490231058
+    },
+    {
+        "S.No.":47,
+        "Roll Number":"217Z1A0549",
+        "Name of the Student":"DEDAVATH KIRAN",
+        "Father Name":"DEDAVATH BABU",
+        "Student Mobile":7207809905,
+        "Parent Mobile":7382063831
+    },
+    {
+        "S.No.":48,
+        "Roll Number":"217Z1A0550",
+        "Name of the Student":"DEDAVATH SHIVANI",
+        "Father Name":"DEDAVATH UMA SHANKAR",
+        "Student Mobile":8125331420,
+        "Parent Mobile":9704024795
+    },
+    {
+        "S.No.":49,
+        "Roll Number":"217Z1A0551",
+        "Name of the Student":"DEGAVATH SATISH",
+        "Father Name":"DEGAVATH VITTAL",
+        "Student Mobile":8096696383,
+        "Parent Mobile":9553838112
+    },
+    {
+        "S.No.":50,
+        "Roll Number":"217Z1A0552",
+        "Name of the Student":"DEVARAKONDA NANDINI",
+        "Father Name":"DEVARAKONDA NAGAIAH",
+        "Student Mobile":7093773185,
+        "Parent Mobile":9603186540
+    },
+    {
+        "S.No.":51,
+        "Roll Number":"217Z1A0553",
+        "Name of the Student":"DHEERAVATH LOKESH",
+        "Father Name":"DHEERAVATH RAGYA",
+        "Student Mobile":9676443008,
+        "Parent Mobile":9346446718
+    },
+    {
+        "S.No.":52,
+        "Roll Number":"217Z1A0554",
+        "Name of the Student":"DOMA NAGENDRA",
+        "Father Name":"DOMA SRINIVAS",
+        "Student Mobile":7780786417,
+        "Parent Mobile":9246679012
+    },
+    {
+        "S.No.":53,
+        "Roll Number":"217Z1A0555",
+        "Name of the Student":"DUDDUKURI VAMSHI",
+        "Father Name":"DUDDUKURI BHASKAR RAO",
+        "Student Mobile":9390661337,
+        "Parent Mobile":9848452584
+    },
+    {
+        "S.No.":54,
+        "Roll Number":"217Z1A0556",
+        "Name of the Student":"DYAWATH RISHI KUSHAL",
+        "Father Name":"DYAWATH POSHETTY",
+        "Student Mobile":9949408594,
+        "Parent Mobile":8522064822
+    },
+    {
+        "S.No.":55,
+        "Roll Number":"217Z1A0557",
+        "Name of the Student":"EARVA BHAVANA",
+        "Father Name":"EARVA SATHYANARAYANA",
+        "Student Mobile":9292245406,
+        "Parent Mobile":9701170580
+    },
+    {
+        "S.No.":56,
+        "Roll Number":"217Z1A0558",
+        "Name of the Student":"ELUKAPELLI AKILESH",
+        "Father Name":"ELUKAPELLI SRINIVAS",
+        "Student Mobile":9989593022,
+        "Parent Mobile":8897024756
+    },
+    {
+        "S.No.":57,
+        "Roll Number":"217Z1A0559",
+        "Name of the Student":"ENUKONDA ABHIRAM REDDY",
+        "Father Name":"ENUKONDA MUKUNDA REDDY",
+        "Student Mobile":8074840476,
+        "Parent Mobile":9885400079
+    },
+    {
+        "S.No.":58,
+        "Roll Number":"217Z1A0560",
+        "Name of the Student":"ERRAVELLI RAGHURAM CHARY",
+        "Father Name":"ERRAVELLI ANAND CHARY",
+        "Student Mobile":8340893719,
+        "Parent Mobile":9391111169
+    },
+    {
+        "S.No.":59,
+        "Roll Number":"217Z1A0561",
+        "Name of the Student":"ESARAPU BHUVAN GOUD",
+        "Father Name":"ESARAPU SRINIVAS GOUD",
+        "Student Mobile":7993037055,
+        "Parent Mobile":9959917320
+    },
+    {
+        "S.No.":60,
+        "Roll Number":"217Z1A0562",
+        "Name of the Student":"ESLAVATH GANAPATHI",
+        "Father Name":"ESLAVATH BOJYA NAYAK",
+        "Student Mobile":6281722312,
+        "Parent Mobile":8247008110
+    },
+    {
+        "S.No.":61,
+        "Roll Number":"217Z1A0563",
+        "Name of the Student":"GADAMSETTY JAHNAVI",
+        "Father Name":"GADAMSETTY V M L PRASADA RAO",
+        "Student Mobile":6309280424,
+        "Parent Mobile":6309280424
+    },
+    {
+        "S.No.":62,
+        "Roll Number":"217Z1A0564",
+        "Name of the Student":"GADDAM RAJEEV",
+        "Father Name":"GADDAM SHANKARAIAH",
+        "Student Mobile":8340058888,
+        "Parent Mobile":8121804043
+    },
+    {
+        "S.No.":63,
+        "Roll Number":"217Z1A0565",
+        "Name of the Student":"GADDAMEEDI NIKHITA",
+        "Father Name":"GADDAMEEDI ANAND KUMAR",
+        "Student Mobile":9603254825,
+        "Parent Mobile":9603254825
+    },
+    {
+        "S.No.":64,
+        "Roll Number":"217Z1A0566",
+        "Name of the Student":"GAJBINKAR SRINIVAS",
+        "Father Name":"GAJBINKAR GNANESHWAR",
+        "Student Mobile":8688177941,
+        "Parent Mobile":9949593373
+    },
+    {
+        "S.No.":65,
+        "Roll Number":"217Z1A0567",
+        "Name of the Student":"GALIPELLI SRIKANTH",
+        "Father Name":"GALIPELLI SRINIVAS",
+        "Student Mobile":9652743643,
+        "Parent Mobile":7095017241
+    },
+    {
+        "S.No.":66,
+        "Roll Number":"217Z1A0568",
+        "Name of the Student":"GAMPALA REKHA SRI NANDAN",
+        "Father Name":"GAMPALA RAMA KRISHNA",
+        "Student Mobile":6281178065,
+        "Parent Mobile":9848931641
+    },
+    {
+        "S.No.":67,
+        "Roll Number":"217Z1A0569",
+        "Name of the Student":"GANDHAM ROSHINI",
+        "Father Name":"GANDHAM RAJENDHAR",
+        "Student Mobile":9963628918,
+        "Parent Mobile":9948515619
+    }
+]

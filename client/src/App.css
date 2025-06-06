@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Reset / Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Poppins as the primary font */
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa; /* Lighter gray background */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content container for pages */
+main {
+  flex-grow: 1;
+  padding: 1.5rem; /* Increased padding */
+  width: 100%;
+  max-width: 1200px; /* Max width for larger screens */
+  margin: 0 auto; /* Center content */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.75rem;
+  color: #2c3e50; /* Slightly softer, more modern dark blue/charcoal */
+  line-height: 1.3;
+  font-weight: 600; /* Poppins looks good with a bit more weight on headings */
+}
+
+h1 { font-size: 2.2rem; font-weight: 700; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.5rem; }
+
+/* Links */
+a {
+  color: #3498db; /* A brighter, more modern blue */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration: none; /* Often, no underline is cleaner with modern fonts */
+  color: #2980b9; /* Darker shade of the link blue */
+}
+
+/* Buttons - Basic Styling (can be overridden by component-specific styles) */
+button, .btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  background-color: #3498db; /* Match new link color */
+  color: white;
+  border-color: #3498db; /* Match new link color */
+}
+
+.btn-primary:hover {
+  background-color: #2980b9; /* Match new link hover color */
+  border-color: #2874a6; /* Slightly darker border for hover */
+}
+
+.btn-danger {
+  background-color: #e74c3c; /* A modern red */
+  border-color: #e74c3c;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b; /* Darker shade of red */
+  border-color: #b33225;
+}
+
+/* Forms - Basic Styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="search"],
+textarea,
+select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Utility classes */
+.container { /* General purpose container if needed */
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) { .container { max-width: 540px; } }
+@media (min-width: 768px) { .container { max-width: 720px; } }
+@media (min-width: 992px) { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+
+
+.text-center { text-align: center; }
+.p-1 { padding: 1rem; }
+.m-1 { margin: 1rem; }
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+
+
+/* Remove default App.js specific styles if not needed */
+/*
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/

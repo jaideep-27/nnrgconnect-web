@@ -1,0 +1,216 @@
+/* Inherit global styles */
+.search-container {
+  /* max-width: 800px; */
+  margin: 1rem auto; /* Consistent with global main */
+  padding: 1rem;
+  /* background-color: #f9f9f9; /* Consider removing if global bg is sufficient */
+}
+
+.search-header {
+  text-align: center;
+  /* color: #1a2c42; Handled by global h2 */
+  margin-bottom: 2rem; /* Increased margin */
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem; /* Increased margin */
+  background-color: #fff;
+  padding: 2rem; /* Increased padding */
+  border-radius: 12px; /* Softer radius */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09);
+  border: 1px solid #e9ecef;
+}
+
+.search-input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Increased gap */
+  align-items: center;
+}
+
+.search-input {
+  flex-grow: 1;
+  min-width: 220px; /* Ensure decent width */
+  /* Global input styles from App.css apply */
+}
+
+.search-type-select {
+  min-width: 180px; /* Ensure decent width */
+  /* Global select styles from App.css apply */
+}
+
+.search-button {
+  align-self: flex-start;
+  /* Global .btn and .btn-primary styles from App.css apply */
+}
+
+.search-feedback, /* Combined error and general feedback messages */
+.search-error {
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 6px; /* Softer radius */
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.search-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.search-loading,
+.no-results-message {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 2rem;
+  color: #5a6773; /* Softer color */
+  margin-top: 1.5rem;
+}
+
+.search-results-container {
+  margin-top: 2rem;
+}
+
+.results-header {
+  /* color: #1a2c42; Handled by global h3 */
+  font-size: 1.6rem; /* Adjusted size */
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.results-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly wider cards */
+  gap: 1.5rem; /* Increased gap */
+}
+
+.result-item {
+  background-color: #fff;
+  padding: 1.75rem; /* Increased padding */
+  border: 1px solid #e9ecef;
+  border-radius: 10px; /* Softer radius */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.result-item-name {
+  font-weight: 600; /* Poppins bold */
+  font-size: 1.25rem;
+  color: #2980b9; /* Match theme blue */
+  margin-bottom: 0.5rem;
+}
+
+.result-item-roll {
+  font-size: 0.95rem;
+  color: #5a6773;
+}
+
+/* Styles for Suggested Members Section */
+.suggested-members-section {
+  margin-top: 2.5rem; /* Give it space from the search results */
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: var(--default-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.suggested-members-header {
+  font-size: 1.6rem;
+  color: var(--primary-color-dark);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.suggested-members-grid {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+
+.suggested-members-grid > .user-card {
+  min-width: 280px;
+  flex: 0 0 auto;
+}
+
+.suggested-loading,
+.suggested-error {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-color-light);
+  background-color: var(--background-color);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.suggested-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+/* Responsive adjustments for Suggested Members Section */
+@media (min-width: 768px) {
+  .suggested-members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    overflow-x: visible;
+    gap: 1.5rem;
+  }
+  .suggested-members-grid > .user-card {
+    min-width: auto;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-input,
+  .search-type-select,
+  .search-button {
+    width: 100%;
+  }
+  .results-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-header {
+    font-size: 1.7rem;
+  }
+  .results-header {
+    font-size: 1.4rem;
+  }
+  .search-form {
+    padding: 1.5rem;
+  }
+  .result-item {
+    padding: 1.5rem;
+  }
+}
+
+ 

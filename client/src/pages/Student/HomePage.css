@@ -1,0 +1,293 @@
+.home-page-container {
+  /* padding: 1rem; Already handled by .container utility class if used, or keep for specific page padding */
+  /* max-width: 1200px; Handled by .container */
+  /* margin: 0 auto; Handled by .container */
+}
+
+/* Existing .home-header renamed to .home-hero-section and enhanced */
+.home-hero-section {
+  background: linear-gradient(135deg, var(--primary-color), #2c3e50); /* Using var for primary color */
+  color: white;
+  padding: 3rem 1rem; /* Adjusted padding for mobile */
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for hero */
+}
+
+.hero-content h1 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 2.2rem; /* Adjusted for mobile */
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem; /* Adjusted for mobile */
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-user-greeting {
+  font-size: 1rem; /* Adjusted for mobile */
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.15); /* Slightly more visible */
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* About Section */
+.home-about-section {
+  padding: 2rem 1rem; /* Adjusted padding for mobile */
+  margin-bottom: 2.5rem;
+  background-color: var(--card-background); /* Using variable */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: var(--default-shadow);
+}
+
+.home-about-section h2 {
+  /* color: #2c3e50; Inherits from global h2 styles */
+  margin-bottom: 1rem;
+  font-size: 1.8rem; /* Adjusted for mobile */
+}
+
+.home-about-section p {
+  font-size: 1rem; /* Adjusted for mobile */
+  color: var(--text-color-light); /* Using variable */
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Features Section */
+.home-features-section {
+  margin-bottom: 2.5rem;
+  padding: 0 1rem; /* Added padding for mobile */
+  text-align: center;
+}
+
+.home-features-section h2 {
+  /* color: #2c3e50; Inherits from global h2 styles */
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem; /* Adjusted for mobile */
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Slightly smaller min for mobile */
+  gap: 1.5rem; /* Adjusted gap */
+}
+
+/* Replaces and enhances old .info-card */
+.feature-card {
+  background-color: var(--card-background); /* Using variable */
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color); /* Using variable */
+  box-shadow: var(--default-shadow); /* Using variable */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--hover-shadow); /* Using variable */
+}
+
+.feature-icon {
+  font-size: 2.2rem;
+  color: var(--primary-color); /* Using variable */
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  color: var(--primary-color-dark); /* Using variable */
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1.25rem; /* Adjusted for mobile */
+}
+
+.feature-card p {
+  font-size: 0.9rem; /* Adjusted for mobile */
+  color: var(--text-color-light); /* Using variable */
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.feature-link {
+  display: inline-block;
+  padding: 0.7rem 1.4rem; /* Slightly larger padding */
+  background-color: var(--primary-color); /* Using variable */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px; /* Slightly softer radius */
+  font-weight: 500;
+  font-size: 0.9rem; /* Adjusted for mobile */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: auto;
+}
+
+.feature-link:hover {
+  background-color: var(--primary-color-dark); /* Using variable */
+  color: white;
+  transform: scale(1.05); /* Add subtle scale effect */
+}
+
+/* Footer Note */
+.home-footer-note {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  background-color: #e9ecef; /* Kept specific or could be a variable like --light-accent-bg */
+  border-radius: 8px;
+  color: var(--text-color-light); /* Using variable */
+  font-size: 0.85rem; /* Adjusted for mobile */
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+  .home-hero-section {
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+  }
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  .hero-user-greeting {
+    font-size: 1.1rem;
+  }
+  .home-about-section {
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .home-about-section h2 {
+    font-size: 2rem;
+  }
+  .home-about-section p {
+    font-size: 1.1rem;
+  }
+  .home-features-section {
+    padding: 0; /* Remove padding if container handles it */
+    margin-bottom: 3rem;
+  }
+  .home-features-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .features-grid {
+    gap: 2rem;
+  }
+  .feature-card {
+    padding: 2.5rem 2rem;
+  }
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+  .feature-card h3 {
+    font-size: 1.4rem;
+  }
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+  .feature-link {
+    font-size: 1rem;
+     padding: 0.6rem 1.2rem; /* Revert to original for desktop if preferred */
+  }
+  .home-footer-note {
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Keeping existing responsive grid for features, should work well */
+.home-content { /* This class was used for the old grid, features-grid replaces its role for HomePage */
+  /* display: grid; */ /* Commenting out as .features-grid is now used */
+  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+  /* gap: 2rem; */
+}
+
+/* Commenting out original .home-header as it's replaced by .home-hero-section */
+/*
+.home-header {
+  background: linear-gradient(135deg, #3498db, #2980b9); 
+  color: white;
+  padding: 2.5rem 2rem; 
+  border-radius: 12px; 
+  margin-bottom: 2.5rem; 
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(41, 128, 185, 0.3); 
+}
+
+.home-header h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 2.2rem; 
+  font-weight: 600; 
+  color: white;
+}
+
+.home-header p {
+  font-size: 1.1rem;
+  font-weight: 300; 
+  opacity: 0.95;
+}
+*/
+
+/* Commenting out .info-card as it is replaced by .feature-card for the home page */
+/*
+.info-card {
+  background-color: #ffffff;
+  padding: 2rem; 
+  border-radius: 10px; 
+  border: 1px solid #e0e0e0; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.info-card h3 {
+  margin-top: 0;
+  color: #2980b9; 
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+*/
+
+/* Styles for a potential feed section (currently commented out in JSX) - kept for future */
+.feed-section {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background-color: #e9ecef;
+  border-radius: 10px;
+}
+
+.feed-section h3 {
+  margin-top: 0;
+  font-weight: 600;
+  color: #2c3e50; /* Or use a variable */
+} 
