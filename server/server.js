@@ -18,12 +18,43 @@ const PORT = process.env.PORT || 5001; // Changed port to 5001 to avoid common c
 
 // Middleware
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: ['http://localhost:3000', 'https://nnrgconnect.vercel.app'],
   optionsSuccessStatus: 200 // For legacy browser support
 };
 app.use(cors(corsOptions));
 app.use(express.json()); // To parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // To parse URL-encoded request bodies
+
+// Add middleware to transform image URLs to absolute URLs
+app.use((req, res, next) => {
+  const originalJson = res.json;
+  res.json = function(data) {
+    if (data && typeof data === 'object') {
+      // Transform single object
+      if (data.profilePictureUrl && !data.profilePictureUrl.startsWith('http')) {
+        data.profilePictureUrl = `${req.protocol}://${req.get('host')}${data.profilePictureUrl}`;
+      }
+      if (data.collegeIdCardImage && !data.collegeIdCardImage.startsWith('http')) {
+        data.collegeIdCardImage = `${req.protocol}://${req.get('host')}${data.collegeIdCardImage}`;
+      }
+      
+      // Transform arrays of objects
+      if (Array.isArray(data)) {
+        data = data.map(item => {
+          if (item.profilePictureUrl && !item.profilePictureUrl.startsWith('http')) {
+            item.profilePictureUrl = `${req.protocol}://${req.get('host')}${item.profilePictureUrl}`;
+          }
+          if (item.collegeIdCardImage && !item.collegeIdCardImage.startsWith('http')) {
+            item.collegeIdCardImage = `${req.protocol}://${req.get('host')}${item.collegeIdCardImage}`;
+          }
+          return item;
+        });
+      }
+    }
+    return originalJson.call(this, data);
+  };
+  next();
+});
 
 // Serve static files from the 'uploads' directory (for ID cards and other assets)
 // The path.join is important for cross-platform compatibility

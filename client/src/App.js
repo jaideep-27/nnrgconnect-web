@@ -41,23 +41,13 @@ const AdminRoute = ({ children }) => {
 };
 
 function App() {
-  const { loading, isAuthenticated } = useAuth();
-
-  if (loading) {
-    return (
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        <h2>Loading NNRG Connect...</h2>
-      </div>
-    );
-  }
-
   return (
     <Router>
       <ScrollToTop />
       <Routes>
         {/* Public Auth Routes */}
-        <Route path="/signin" element={isAuthenticated ? <Navigate to="/" replace /> : <SignInPage />} />
-        <Route path="/signup" element={isAuthenticated ? <Navigate to="/" replace /> : <SignUpPage />} />
+        <Route path="/signin" element={<SignInPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
 
         {/* Protected Student Routes */}
         <Route path="/" element={<ProtectedRoute><MainLayout><HomePage /></MainLayout></ProtectedRoute>} />
@@ -81,7 +71,7 @@ function App() {
         */}
 
         {/* Fallback for unknown routes */}
-        <Route path="*" element={<Navigate to={isAuthenticated ? "/" : "/signin"} replace />} />
+        <Route path="*" element={<Navigate to="/signin" replace />} />
       </Routes>
     </Router>
   );

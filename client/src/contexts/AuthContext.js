@@ -48,19 +48,17 @@ export const AuthProvider = ({ children }) => {
     verifyUser();
   }, [token]);
 
+  // Only use local loading in components for login/signup
   const login = async (email, password) => {
-    setLoading(true);
     try {
       const response = await axios.post(`${API_BASE_URL}/auth/signin`, { email, password });
       const { token: userToken, user } = response.data;
       setToken(userToken);
       setCurrentUser(user);
       setIsAdmin(user.isAdmin || false);
-      setLoading(false);
       // On success, return a success object
       return { success: true, user };
     } catch (error) {
-      setLoading(false);
       const errorMessage = (error.response && error.response.data && error.response.data.message)
         ? error.response.data.message
         : 'An unknown error occurred during login.';
@@ -72,17 +70,14 @@ export const AuthProvider = ({ children }) => {
 
   const signup = async (formDataObject) => {
     // formDataObject should be a FormData instance for multipart/form-data
-    setLoading(true);
     try {
       const response = await axios.post(`${API_BASE_URL}/auth/signup`, formDataObject, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      setLoading(false);
       return response.data; // Return success message or data
     } catch (error) {
-      setLoading(false);
       // Construct a new error with the specific message from the backend
       const errorMessage = (error.response && error.response.data && error.response.data.message)
         ? error.response.data.message

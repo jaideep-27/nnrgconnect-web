@@ -16,6 +16,7 @@
   width: 100%;
   max-width: 420px; /* Slightly wider for comfort */
   text-align: center; /* Center contents like logo and heading */
+  position: relative;
 }
 
 .auth-logo {
@@ -36,6 +37,7 @@
 
 .auth-input-group {
   margin-bottom: 1.25rem; /* Use rem */
+  text-align: left;
 }
 
 .auth-input-group label {
@@ -46,44 +48,153 @@
   font-size: 0.9rem;
 }
 
+.auth-input-group input,
+.auth-input-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.auth-input-group input:focus,
+.auth-input-group select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Error state for inputs */
+.auth-input-error {
+  border-color: #f44336 !important;
+  background-color: #fff8f8;
+}
+
+.auth-input-error:focus {
+  box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.15) !important;
+}
+
 /* Input styles are now primarily handled by App.css */
 /* We might keep specific tweaks for file input if necessary */
 .auth-input-group input[type="file"] {
-  /* Global styles will apply, but we can override padding or add specific styles if needed */
-  /* For example, if it needs less padding than text inputs: */
-  /* padding: 0.4rem 0.6rem; */ 
-  /* Ensure it still looks consistent */
-  border: 1px solid #ced4da; /* Explicitly set border if global is too generic */
+  padding: 0.5rem;
+  border: 1px dashed #ced4da;
+  background-color: #f8f9fa;
+  cursor: pointer;
 }
 
 /* .auth-button styles are now handled by .btn and .btn-primary in App.css */
 /* Ensure buttons in SignInPage.js and SignUpPage.js have these classes. */
 
-.auth-message {
-  padding: 0.75rem 1.25rem;
+.auth-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
   margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  text-align: center;
+}
+
+.auth-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+.auth-button:active {
+  transform: translateY(0);
+}
+
+.auth-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Message Styles */
+.auth-message {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem; /* Adjusted gap since no icon */
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem; /* Adjusted left padding */
+  margin: 1.2rem 0;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  text-align: left;
+  animation: slideIn 0.3s ease-out;
+  min-height: 56px;
+  box-sizing: border-box;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.auth-message .auth-message-close {
+  position: absolute;
+  right: 1.1rem;
+  top: 1.1rem;
+  font-size: 1.3rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+.auth-message .auth-message-close:hover {
+  opacity: 1;
 }
 
 .auth-error {
-  color: #721c24; /* Dark red for errors */
-  background-color: #f8d7da; /* Light red background */
-  border-color: #f5c6cb; /* Red border */
+  color: #b71c1c;
+  background-color: #ffebee;
+  border: 1.5px solid #f44336;
 }
 
 .auth-success {
-    color: #155724; /* Dark green for success */
-    background-color: #d4edda; /* Light green background */
-    border-color: #c3e6cb; /* Green border */
+  color: #155724;
+  background-color: #e6f4ea;
+  border: 1.5px solid #34c759;
+}
+
+.auth-info {
+  color: #0c5460;
+  background-color: #e3f7fc;
+  border: 1.5px solid #17a2b8;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.auth-input-success {
+  border-color: #34c759 !important;
+  background-color: #f4fff7;
+}
+.auth-input-success:focus {
+  box-shadow: 0 0 0 2px rgba(52, 199, 89, 0.15) !important;
 }
 
 .auth-redirect-link {
   text-align: center;
   margin-top: 1.5rem; /* Use rem */
   font-size: 0.9rem;
+  color: #495057;
 }
 
 .auth-redirect-link p {
@@ -92,14 +203,14 @@
 }
 
 .auth-redirect-link a {
-  color: #007bff; /* Global link color */
+  color: #3498db;
   text-decoration: none;
   font-weight: 600;
+  margin-left: 0.25rem;
 }
 
 .auth-redirect-link a:hover {
   text-decoration: underline;
-  color: #0056b3; /* Global link hover color */
 }
 
 /* Responsive adjustments */
@@ -109,5 +220,17 @@
   }
   .auth-form-wrapper h2 {
     font-size: 1.5rem;
+  }
+
+  .auth-input-group input,
+  .auth-input-group select,
+  .auth-button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .auth-message {
+    font-size: 0.85rem;
+    padding: 0.75rem;
   }
 } 

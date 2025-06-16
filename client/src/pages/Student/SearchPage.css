@@ -86,38 +86,42 @@
   border-bottom: 1px solid #e9ecef;
 }
 
-.results-list {
-  list-style: none;
-  padding: 0;
+.search-results-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly wider cards */
-  gap: 1.5rem; /* Increased gap */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
-.result-item {
-  background-color: #fff;
-  padding: 1.75rem; /* Increased padding */
-  border: 1px solid #e9ecef;
-  border-radius: 10px; /* Softer radius */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.search-results-grid .user-card {
+  aspect-ratio: 4/3;
+  margin-bottom: 0; /* Override the default margin from UserCard.css */
+  display: flex;
+  flex-direction: column;
 }
 
-.result-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-.result-item-name {
-  font-weight: 600; /* Poppins bold */
-  font-size: 1.25rem;
-  color: #2980b9; /* Match theme blue */
+.search-results-grid .user-card-header {
   margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.result-item-roll {
-  font-size: 0.95rem;
-  color: #5a6773;
+.search-results-grid .user-card-info {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.search-results-grid .user-card-body {
+  flex-grow: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.search-results-grid .user-card-footer {
+  margin-top: auto;
+  padding-top: 0.5rem;
 }
 
 /* Styles for Suggested Members Section */
@@ -193,8 +197,8 @@
   .search-button {
     width: 100%;
   }
-  .results-list {
-    grid-template-columns: 1fr;
+  .search-results-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
 
@@ -208,8 +212,161 @@
   .search-form {
     padding: 1.5rem;
   }
-  .result-item {
-    padding: 1.5rem;
+  .search-results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.search-page-container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-header {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.search-form {
+  margin-bottom: 2rem;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.search-type-select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 1rem;
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover {
+  background-color: #2980b9;
+}
+
+.search-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.search-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.suggested-members-section {
+  margin-top: 2rem;
+}
+
+.suggested-members-header {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.suggested-members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.search-error-message,
+.search-loading-message,
+.no-results-found-message,
+.search-prompt-message,
+.suggested-loading,
+.suggested-error {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: #666;
+}
+
+.search-error-message {
+  color: #e74c3c;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  .search-page-container {
+    padding: 0.5rem;
+  }
+
+  .search-header {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .search-input-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search-input,
+  .search-type-select {
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .search-results-grid,
+  .suggested-members-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .suggested-members-section {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .search-page-container {
+    padding: 0.5rem;
+  }
+
+  .search-header {
+    font-size: 1.1rem;
+  }
+
+  .search-input,
+  .search-type-select,
+  .search-button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
   }
 }
 
