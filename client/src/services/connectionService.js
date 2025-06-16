@@ -67,21 +67,18 @@ export const checkBulkConnectionStatusAPI = async (userIds, token) => {
     return {}; // Return an empty map if there are no IDs to check
   }
   try {
-    const response = await fetch('/api/connections/status/bulk', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
-      },
-      body: JSON.stringify({ userIds }),
-    });
-    const data = await response.json();
-    if (!response.ok) {
-      throw new Error(data.message || `Error checking bulk status: ${response.statusText}`);
-    }
-    return data;
+    const response = await axios.post(`${API_BASE_URL}/connections/status/bulk`, 
+      { userIds },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+      }
+    );
+    return response.data;
   } catch (error) {
     console.error('Error in checkBulkConnectionStatusAPI:', error);
-    throw error;
+    throw error.response ? error.response.data : new Error('Failed to check bulk connection status');
   }
 }; 

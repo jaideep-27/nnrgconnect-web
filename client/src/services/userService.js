@@ -73,7 +73,7 @@ export const getSuggestedUsersAPI = async (token) => {
     throw new Error('Authentication token not found.');
   }
   try {
-    const response = await fetch('/api/users/suggested', {
+    const response = await fetch(`${API_BASE_URL}/users/suggested`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

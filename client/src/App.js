@@ -8,6 +8,7 @@ import { useAuth } from './contexts/AuthContext';
 // Layout
 import MainLayout from './components/Layout/MainLayout';
 import ScrollToTop from './components/common/ScrollToTop';
+import LoadingState from './components/LoadingState';
 
 // Auth Pages
 import SignInPage from './pages/Auth/SignInPage';
@@ -25,19 +26,15 @@ import PendingRequestsPage from './pages/Admin/PendingRequestsPage';
 // Higher-Order Component for protected routes
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
-  if (loading) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}><h2>Loading...</h2></div>;
+  if (loading) return <LoadingState fullScreen message="Loading..." />;
   return isAuthenticated ? children : <Navigate to="/signin" replace />;
 };
 
-// Higher-Order Component for admin-only routes
+// Higher-Order Component for admin routes
 const AdminRoute = ({ children }) => {
   const { isAuthenticated, isAdmin, loading } = useAuth();
-  if (loading) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}><h2>Loading...</h2></div>;
-  
-  if (!isAuthenticated) {
-    return <Navigate to="/signin" replace />;
-  }
-  return isAdmin ? children : <Navigate to="/" replace />; // Redirect to home if not admin
+  if (loading) return <LoadingState fullScreen message="Loading..." />;
+  return isAuthenticated && isAdmin ? children : <Navigate to="/" replace />;
 };
 
 function App() {
