@@ -30,22 +30,26 @@ app.use((req, res, next) => {
   const originalJson = res.json;
   res.json = function(data) {
     if (data && typeof data === 'object') {
+      const baseUrl = process.env.NODE_ENV === 'production' 
+        ? process.env.FRONTEND_URL || 'https://nnrgconnect.vercel.app'
+        : `${req.protocol}://${req.get('host')}`;
+
       // Transform single object
       if (data.profilePictureUrl && !data.profilePictureUrl.startsWith('http')) {
-        data.profilePictureUrl = `${req.protocol}://${req.get('host')}${data.profilePictureUrl}`;
+        data.profilePictureUrl = `${baseUrl}${data.profilePictureUrl}`;
       }
       if (data.collegeIdCardImage && !data.collegeIdCardImage.startsWith('http')) {
-        data.collegeIdCardImage = `${req.protocol}://${req.get('host')}${data.collegeIdCardImage}`;
+        data.collegeIdCardImage = `${baseUrl}${data.collegeIdCardImage}`;
       }
       
       // Transform arrays of objects
       if (Array.isArray(data)) {
         data = data.map(item => {
           if (item.profilePictureUrl && !item.profilePictureUrl.startsWith('http')) {
-            item.profilePictureUrl = `${req.protocol}://${req.get('host')}${item.profilePictureUrl}`;
+            item.profilePictureUrl = `${baseUrl}${item.profilePictureUrl}`;
           }
           if (item.collegeIdCardImage && !item.collegeIdCardImage.startsWith('http')) {
-            item.collegeIdCardImage = `${req.protocol}://${req.get('host')}${item.collegeIdCardImage}`;
+            item.collegeIdCardImage = `${baseUrl}${item.collegeIdCardImage}`;
           }
           return item;
         });

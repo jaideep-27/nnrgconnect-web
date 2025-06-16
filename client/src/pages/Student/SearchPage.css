@@ -221,16 +221,23 @@
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  min-height: calc(100vh - 200px); /* Ensure minimum height for proper loading state display */
+  position: relative; /* For proper loading state positioning */
 }
 
 .search-header {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   color: #2c3e50;
+  text-align: center;
 }
 
 .search-form {
   margin-bottom: 2rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .search-input-group {
@@ -266,6 +273,10 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
 }
 
 .search-button:hover {
@@ -286,12 +297,17 @@
 
 .suggested-members-section {
   margin-top: 2rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .suggested-members-header {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   color: #2c3e50;
+  text-align: center;
 }
 
 .suggested-members-grid {
@@ -310,10 +326,16 @@
   padding: 1rem;
   margin: 1rem 0;
   color: #666;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.search-error-message {
+.search-error-message,
+.suggested-error {
   color: #e74c3c;
+  background-color: #fdf3f2;
+  border: 1px solid #fadbd8;
 }
 
 /* Mobile-first responsive design */
@@ -349,6 +371,7 @@
 
   .suggested-members-section {
     margin-top: 1.5rem;
+    padding: 1rem;
   }
 }
 

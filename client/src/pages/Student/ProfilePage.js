@@ -39,15 +39,8 @@ const ProfilePage = () => {
       setEmailDisplay(currentUser.displayEmail !== undefined ? currentUser.displayEmail : true);
       setContactDisplay(currentUser.displayContactNumber !== undefined ? currentUser.displayContactNumber : true);
       
-      // Robust URL construction for profile picture
-      if (currentUser.profilePictureUrl) {
-        const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:5001';
-        // Ensure no double slashes and path starts with a slash if not already
-        const picturePath = currentUser.profilePictureUrl.startsWith('/') ? currentUser.profilePictureUrl : `/${currentUser.profilePictureUrl}`;
-        setProfilePicturePreview(`${baseUrl}${picturePath}`);
-      } else {
-        setProfilePicturePreview('');
-      }
+      // Set profile picture preview directly from the URL provided by the server
+      setProfilePicturePreview(currentUser.profilePictureUrl || '');
     }
   }, [currentUser]);
 

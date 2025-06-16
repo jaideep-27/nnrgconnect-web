@@ -88,11 +88,11 @@ const PendingRequestsPage = () => {
                   <td>
                     {user.collegeIdCardImage ? (
                       <a 
-                        href={`${process.env.REACT_APP_API_URL || 'http://localhost:5001'}${user.collegeIdCardImage}`}
+                        href={user.collegeIdCardImage}
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
-                        <img src={`${process.env.REACT_APP_API_URL || 'http://localhost:5001'}${user.collegeIdCardImage}`} alt="ID Card" className="id-card-image-thumbnail" />
+                        <img src={user.collegeIdCardImage} alt="ID Card" className="id-card-image-thumbnail" />
                       </a>
                     ) : (
                       'N/A'

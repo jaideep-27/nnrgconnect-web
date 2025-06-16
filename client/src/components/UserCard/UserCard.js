@@ -45,9 +45,7 @@ const UserCard = ({ user, isInitiallyConnected }) => {
 
   if (!user) return null;
 
-  const profilePictureUrl = user.profilePictureUrl
-    ? `${process.env.REACT_APP_API_URL || 'http://localhost:5001'}${user.profilePictureUrl}`
-    : null;
+  const profilePictureUrl = user.profilePictureUrl || null;
 
   // Do not show connect button for the current user's own card (if it could appear in a list)
   const isOwnProfile = currentUser && currentUser._id === user._id;

@@ -3,6 +3,7 @@ import { useAuth } from '../../contexts/AuthContext'; // To get token for API ca
 import { searchUsersAPI, getSuggestedUsersAPI } from '../../services/userService'; // Import the new service and getSuggestedUsersAPI
 import { checkBulkConnectionStatusAPI } from '../../services/connectionService'; // Import the new bulk status checker
 import UserCard from '../../components/UserCard/UserCard'; // Import UserCard
+import LoadingState from '../../components/LoadingState';
 import './SearchPage.css'; // Create and import a CSS file for styling
 
 const SearchPage = () => {
@@ -126,13 +127,13 @@ const SearchPage = () => {
           </select>
         </div>
         <button type="submit" disabled={loading} className="search-button">
-          {loading ? 'Searching...' : 'Search'}
+          {loading ? <LoadingState inline message="Searching..." /> : 'Search'}
         </button>
       </form>
 
       {error && <p className="search-error-message">{error}</p>}
 
-      {loading && <div className="search-loading-message">Searching...</div>}
+      {loading && <LoadingState message="Searching..." />}
 
       {/* Main Search Results Display Block */}
       {!loading && searched && (
@@ -157,7 +158,7 @@ const SearchPage = () => {
 
       {/* Suggested Members Section */}
       {suggestedLoading && (
-        <div className="suggested-loading">Loading Suggestions...</div>
+        <LoadingState message="Loading Suggestions..." />
       )}
       {suggestedError && (
         <p className="suggested-error">Error: {suggestedError}</p>
