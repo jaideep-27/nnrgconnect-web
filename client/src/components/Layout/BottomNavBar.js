@@ -4,7 +4,8 @@ import {
   AiOutlineHome,
   AiOutlineSearch,
   AiOutlineTool,
-  AiOutlineUser
+  AiOutlineUser,
+  AiOutlineTeam
 } from 'react-icons/ai'; // Using Ai icons from react-icons
 import { RiAdminLine } from 'react-icons/ri'; // Import admin icon
 import './BottomNavBar.css';
@@ -31,6 +32,11 @@ const BottomNavBar = () => {
           <span>Admin</span>
         </NavLink>
       )}
+
+      <NavLink to="/community" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
+        <AiOutlineTeam size={24} />
+        <span>Community</span>
+      </NavLink>
 
       <NavLink to="/career" className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}>
         <AiOutlineTool size={24} />

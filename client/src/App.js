@@ -19,6 +19,7 @@ import HomePage from './pages/Student/HomePage';
 import SearchPage from './pages/Student/SearchPage';
 import CareerPage from './pages/Student/CareerPage';
 import ProfilePage from './pages/Student/ProfilePage';
+import CommunityPage from './pages/Student/CommunityPage';
 
 // Admin Pages
 import PendingRequestsPage from './pages/Admin/PendingRequestsPage';
@@ -51,6 +52,7 @@ function App() {
         <Route path="/search" element={<ProtectedRoute><MainLayout><SearchPage /></MainLayout></ProtectedRoute>} />
         <Route path="/career" element={<ProtectedRoute><MainLayout><CareerPage /></MainLayout></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><MainLayout><ProfilePage /></MainLayout></ProtectedRoute>} />
+        <Route path="/community" element={<ProtectedRoute><MainLayout><CommunityPage /></MainLayout></ProtectedRoute>} />
 
         {/* Protected Admin Routes */}
         <Route 
